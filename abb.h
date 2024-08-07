@@ -13,4 +13,13 @@ typedef struct btree{
     No *root;
 }btree;
 
+No* createNo(int leaf);
+btree* createTree();
+No* busca(No *no, char *key);
+void split(No *parent, int i, No *child);
+void insertNonFull(No* no, char *key);
+void insert(btree *tree, char *key);
+void display(No* no, int level);
+void destroy(No *no);
+
 #endif 
